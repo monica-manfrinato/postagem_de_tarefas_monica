@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Salto Vôlei SP - Site Oficial</title>
+    <style>
+      :root {
+        --red: #e50914;
+        --black: #0b0b0b;
+        --muted: #666;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Inter, system-ui, Segoe UI, Roboto, Arial;
+        margin: 0;
+        background: #fff;
+        color: #111;
+        -webkit-font-smoothing: antialiased;
+      }
+      header {
+        background: var(--black);
+        color: #fff;
+        border-bottom: 4px solid var(--red);
+        position: sticky;
+        top: 0;
+        z-index: 50;
+      }
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 18px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .brand img {
+        height: 64px;
+        width: auto;
+      }
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        margin-left: 18px;
+      }
+      nav a:hover {
+        text-decoration: underline;
+      }
+      .hero {
+        display: flex;
+        gap: 24px;
+        align-items: center;
+        justify-content: space-between;
+        padding: 18px 0;
+      }
+      .hero h1 {
+        color: var(--red);
+        margin: 0 0 6px;
+        font-size: 28px;
+      }
+      .card {
+        background: #111;
+        padding: 14px;
+        border-radius: 10px;
+        color: #fff;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      }
+      section {
+        padding: 22px 0;
+        border-bottom: 1px solid #eee;
+      }
+      h2 {
+        margin: 0 0 10px;
+      }
+      .small-muted {
+        color: var(--muted);
+        font-size: 14px;
+      }
+      .schedule {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .match {
+        background: #f8f8f8;
+        padding: 12px;
+        border-radius: 8px;
+        border-left: 6px solid var(--red);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .players {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 12px;
+      }
+      .player {
+        background: #111;
+        color: #fff;
+        padding: 10px;
+        border-radius: 8px;
+        text-align: center;
+      }
+      .player b {
+        display: block;
+        margin-bottom: 6px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 12px;
+      }
+      th,
+      td {
+        padding: 8px;
+        border: 1px solid #ddd;
+        font-size: 14px;
+      }
+      th {
+        background: #f5f5f5;
+      }
+      input[type="number"],
+      input[type="text"],
+      select {
+        width: 100%;
+        padding: 6px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+      }
+      button {
+        background: var(--red);
+        color: #fff;
+        border: 0;
+        padding: 8px 12px;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+      .btn-ghost {
+        background: transparent;
+        border: 1px solid #ddd;
+        color: #111;
+      }
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 12px;
+        margin-top: 12px;
+      }
+      .gallery img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 8px;
+        background: #f0f0f0;
+      }
+      footer {
+        padding: 18px;
+        background: #000;
+        color: #bbb;
+        text-align: center;
+        margin-top: 20px;
+      }
+      @media (max-width: 900px) {
+        .hero {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .brand img {
+          height: 56px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div
+        class="container"
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        "
+      >
+        <div class="brand">
+          <img
+            src="../SRC/IMAGENS/logo.png.png"
+            alt="Logo Salto Vôlei"
+            id="logoImg"
+            onerror="this.style.opacity=0.4"
+          />
+          <div>
+            <div style="font-weight: 800; font-size: 18px">
+              Salto Vôlei - SP
+            </div>
+            <div class="small-muted">
+              Clube oficial • Cores: vermelho e preto
+            </div>
+          </div>
+        </div>
+        <nav>
+          <a href="#jogos">Jogos</a>
+          <a href="#jogadores">Jogadores</a>
+          <a href="#fundamentos">Fundamentos</a>
+          <a href="#galeria">Galeria</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="hero">
+        <div>
+          <h1>Salto Vôlei SP</h1>
+          <p class="small-muted">
+            Orgulho de Salto — acompanhe jogos, elenco e registre o rendimento
+            dos atletas.
+          </p>
+        </div>
+        <div style="min-width: 260px">
+          <div
+            class="card"
+            style="background: linear-gradient(180deg, #111, #0b0b0b)"
+          >
+            <div style="font-weight: 700; color: var(--red)">Próximo jogo</div>
+            <div style="margin-top: 8px">
+              <strong>11/09/2025</strong> — vs Leonor
+            </div>
+            <div style="margin-top: 10px">
+              <button onclick="alert('Integração de ingressos (exemplo)')">
+                Comprar ingressos
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Jogos -->
+      <section id="jogos">
+        <h2 style="color: var(--red)">Próximos jogos</h2>
+        <div class="schedule" style="margin-top: 10px">
+          <div class="match">
+            <div>
+              <strong>Quinta-feira — 11/09/2025</strong>
+              <div class="small-muted">vs Leonor</div>
+            </div>
+            <div class="small-muted">Ginásio Municipal</div>
+          </div>
+          <div class="match">
+            <div>
+              <strong>Sexta-feira — 12/09/2025</strong>
+              <div class="small-muted">vs Cecap</div>
+            </div>
+            <div class="small-muted">Ginásio Municipal</div>
+          </div>
+          <div class="match">
+            <div>
+              <strong>Terça-feira — 16/09/2025</strong>
+              <div class="small-muted">vs Prudente</div>
+            </div>
+            <div class="small-muted">Fora</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Jogadores -->
+      <section id="jogadores">
+        <h2 style="color: var(--red)">Elenco</h2>
+        <div class="players" style="margin-top: 12px">
+          <div class="player">
+            <b>Vitinho</b><span class="small-muted">Ponteiro</span>
+          </div>
+          <div class="player">
+            <b>Dutra</b><span class="small-muted">Ponteiro</span>
+          </div>
+          <div class="player">
+            <b>Valle</b><span class="small-muted">Ponteiro</span>
+          </div>
+          <div class="player">
+            <b>Muzy</b><span class="small-muted">Ponteiro</span>
+          </div>
+          <div class="player">
+            <b>Gabriel</b><span class="small-muted">Ponteiro</span>
+          </div>
+          <div class="player">
+            <b>Assunção</b><span class="small-muted">Levantador</span>
+          </div>
+          <div class="player">
+            <b>Sola</b><span class="small-muted">Líbero</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Fundamentos -->
+      <section id="fundamentos">
+        <h2 style="color: var(--red)">Fundamentos & Rendimento</h2>
+        <p class="small-muted">
+          Escolha o jogo, preencha os valores por jogador e clique em "Salvar
+          estatísticas do jogo". Os dados ficam salvos no seu navegador
+          (localStorage).
+        </p>
+
+        <div
+          style="
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            margin-top: 12px;
+            flex-wrap: wrap;
+          "
+        >
+          <label style="min-width: 260px">
+            Jogo:
+            <select id="matchSelect">
+              <option value="11-09-2025|Leonor">11/09/2025 — Leonor</option>
+              <option value="12-09-2025|Cecap">12/09/2025 — Cecap</option>
+              <option value="16-09-2025|Prudente">16/09/2025 — Prudente</option>
+            </select>
+          </label>
+          <button id="loadBtn" class="btn-ghost" onclick="renderSaved()">
+            Carregar estatísticas salvas
+          </button>
+          <button
+            id="clearMatchBtn"
+            class="btn-ghost"
+            onclick="clearMatchData()"
+          >
+            Limpar dados deste jogo
+          </button>
+        </div>
+
+        <form
+          id="statsForm"
+          onsubmit="event.preventDefault(); saveStats()"
+          style="margin-top: 12px"
+        >
+          <table>
+            <thead>
+              <tr>
+                <th>Jogador</th>
+                <th>Pontos</th>
+                <th>Aces</th>
+                <th>Bloqueios</th>
+                <th>Defesas</th>
+                <th>Saques</th>
+                <th>Observações</th>
+              </tr>
+            </thead>
+            <tbody id="playersTbody"></tbody>
+          </table>
+
+          <div
+            style="margin-top: 10px; display: flex; gap: 8px; flex-wrap: wrap"
+          >
+            <button type="submit">Salvar estatísticas do jogo</button>
+            <button type="button" onclick="exportAll()" class="btn-ghost">
+              Exportar (JSON)
+            </button>
+          </div>
+        </form>
+
+        <div style="margin-top: 18px">
+          <h3>Estatísticas salvas</h3>
+          <p class="small-muted">
+            Clique em 'Exibir' para ver os detalhes salvos por jogo.
+          </p>
+          <table>
+            <thead>
+              <tr>
+                <th>Data</th>
+                <th>Adversário</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody id="savedStatsTbody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Galeria -->
+      <section id="galeria">
+        <h2 style="color: var(--red)">Galeria</h2>
+        <div class="gallery">
+          <img
+            src="../SRC/IMAGENS/logo.png.png"
+            alt="Logo Salto Vôlei"
+            onerror="this.style.opacity=0.4"
+          />
+          <img
+            src="../SRC/IMAGENS/uniforme.png.png"
+            alt="Uniforme Salto Vôlei"
+            onerror="this.style.opacity=0.4"
+          />
+          <img
+            src="../SRC/IMAGENS/equipe.png.png"
+            alt="Equipe Salto Vôlei"
+            onerror="this.style.opacity=0.4"
+          />
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        © 2025 Salto Vôlei - SP · Desenvolvido para o time
+      </div>
+    </footer>
+
+    <script>
+      // jogadores fixos
+      const players = [
+        "Vitinho",
+        "Dutra",
+        "Valle",
+        "Muzy",
+        "Gabriel",
+        "Assunção",
+        "Sola",
+      ];
+
+      function sanitizeKey(s) {
+        return s
+          .normalize("NFD")
+          .replace(/[\\u0300-\\u036f]/g, "")
+          .replace(/\\s+/g, "_")
+          .replace(/[^a-zA-Z0-9_]/g, "")
+          .toLowerCase();
+      }
+
+      function buildPlayersTable() {
+        const tbody = document.getElementById("playersTbody");
+        tbody.innerHTML = "";
+        players.forEach((name) => {
+          const key = sanitizeKey(name);
+          const tr = document.createElement("tr");
+          tr.innerHTML = `
+        <td><strong>${name}</strong></td>
+        <td><input type="number" name="pontos_${key}" min="0"></td>
+        <td><input type="number" name="aces_${key}" min="0"></td>
+        <td><input type="number" name="bloq_${key}" min="0"></td>
+        <td><input type="number" name="def_${key}" min="0"></td>
+        <td><input type="number" name="sac_${key}" min="0"></td>
+        <td><input type="text" name="obs_${key}" placeholder="Ex: bom saque"></td>
+      `;
+          tbody.appendChild(tr);
+        });
+      }
+
+      function getStorage() {
+        try {
+          return JSON.parse(localStorage.getItem("salto_stats") || "{}");
+        } catch (e) {
+          console.error("JSON parse error", e);
+          return {};
+        }
+      }
+
+      function saveStorage(obj) {
+        localStorage.setItem("salto_stats", JSON.stringify(obj));
+      }
+
+      function saveStats() {
+        const matchVal = document.getElementById("matchSelect").value;
+        const [date, opponent] = matchVal.split("|");
+        const key = matchVal; // ex: "11-09-2025|Leonor"
+        const data = { date, opponent, players: {} };
+        players.forEach((name) => {
+          const k = sanitizeKey(name);
+          data.players[name] = {
+            pontos: Number(
+              document.querySelector(`[name="pontos_${k}"]`).value || 0
+            ),
+            aces: Number(
+              document.querySelector(`[name="aces_${k}"]`).value || 0
+            ),
+            bloqueios: Number(
+              document.querySelector(`[name="bloq_${k}"]`).value || 0
+            ),
+            defesas: Number(
+              document.querySelector(`[name="def_${k}"]`).value || 0
+            ),
+            saques: Number(
+              document.querySelector(`[name="sac_${k}"]`).value || 0
+            ),
+            obs: document.querySelector(`[name="obs_${k}"]`).value || "",
+          };
+        });
+        const store = getStorage();
+        store[key] = data;
+        saveStorage(store);
+        alert("Estatísticas salvas localmente para " + date + " — " + opponent);
+        renderSaved();
+      }
+
+      function renderSaved() {
+        const tbody = document.getElementById("savedStatsTbody");
+        const store = getStorage();
+        tbody.innerHTML = "";
+        Object.keys(store).forEach((k) => {
+          const entry = store[k];
+          const tr = document.createElement("tr");
+          tr.innerHTML = `<td>${entry.date}</td><td>${entry.opponent}</td>
+        <td>
+          <button onclick="showDetails('${encodeURIComponent(
+            k
+          )}')">Exibir</button>
+          <button onclick="deleteMatch('${encodeURIComponent(
+            k
+          )}')" style="margin-left:6px" class="btn-ghost">Excluir</button>
+        </td>`;
+          tbody.appendChild(tr);
+        });
+      }
+
+      function showDetails(encodedKey) {
+        const key = decodeURIComponent(encodedKey);
+        const store = getStorage();
+        const entry = store[key];
+        if (!entry) {
+          alert("Nenhum dado para esse jogo.");
+          return;
+        }
+        document.getElementById("matchSelect").value = key;
+        players.forEach((name) => {
+          const k = sanitizeKey(name);
+          const p = entry.players[name] || {};
+          document.querySelector(`[name="pontos_${k}"]`).value = p.pontos || 0;
+          document.querySelector(`[name="aces_${k}"]`).value = p.aces || 0;
+          document.querySelector(`[name="bloq_${k}"]`).value = p.bloqueios || 0;
+          document.querySelector(`[name="def_${k}"]`).value = p.defesas || 0;
+          document.querySelector(`[name="sac_${k}"]`).value = p.saques || 0;
+          document.querySelector(`[name="obs_${k}"]`).value = p.obs || "";
+        });
+        window.location.hash = "#fundamentos";
+      }
+
+      function deleteMatch(encodedKey) {
+        if (!confirm("Confirma exclusão dos dados deste jogo?")) return;
+        const key = decodeURIComponent(encodedKey);
+        const store = getStorage();
+        delete store[key];
+        saveStorage(store);
+        renderSaved();
+      }
+
+      function clearMatchData() {
+        const key = document.getElementById("matchSelect").value;
+        if (!confirm("Limpar dados locais deste jogo?")) return;
+        const store = getStorage();
+        delete store[key];
+        saveStorage(store);
+        buildPlayersTable();
+        renderSaved();
+        alert("Dados removidos.");
+      }
+
+      function exportAll() {
+        const data = getStorage();
+        const blob = new Blob([JSON.stringify(data, null, 2)], {
+          type: "application/json",
+        });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "salto_stats.json";
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        URL.revokeObjectURL(url);
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        buildPlayersTable();
+        renderSaved();
+      });
+    </script>
+  </body>
+</html>

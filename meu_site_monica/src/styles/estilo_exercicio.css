@@ -1,0 +1,8 @@
+body {background-color: #f4f4f4;}
+h1 {color: #000000; background-image: url(../images/fundo_teste.jpg);
+background-repeat: no-repeat; 
+background-size: cover; 
+background-position: center;}
+
+p {color: #333333;}
+video {width: 100%}

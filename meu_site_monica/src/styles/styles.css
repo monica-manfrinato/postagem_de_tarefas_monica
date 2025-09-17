@@ -1,0 +1,11 @@
+/* body {background-color: #fff5c8;} */
+body {background-image: url(../images/gatinho_triste_na_janela_redimensionado_200x300.jpg);background-repeat: no-repeat; /* para a imagem não ficar repetindo */
+background-size: cover; /* para a imagem cobrir todo o espaço disponível na tela sem prejudicar a dimensão */
+background-position: center;} /* para a imagem ficar centralizada, para caso ela não ocupe toda a tela */
+
+strong {color: #ffc200;}
+em {color: #c60000;}
+h1 {color: #054717;}
+
+h2 {color: #054717;}
+h3 {color: #c60000;}
