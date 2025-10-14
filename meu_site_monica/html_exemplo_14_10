@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil Profissional - Mônica</title>
+  <link rel="stylesheet" href="src/css/style.css">
+</head>
+
+<body>
+  <!-- Cabeçalho da página -->
+  <header>
+    <h1>Mônica Oliveira</h1>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#experiencia">Experiência</a>
+      <a href="#habilidades">Habilidades</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main>
+    <section id="sobre">
+      <h2>Sobre Mim</h2>
+      <img src="src/img/foto.jpg" alt="Foto de Mônica Oliveira">
+      <p>Sou estudante de desenvolvimento web e apaixonada por tecnologia, design e soluções criativas. Busco sempre unir estética e funcionalidade em meus projetos.</p>
+    </section>
+
+    <article id="experiencia">
+      <h2>Experiência Principal</h2>
+      <p>Desenvolvi um portfólio interativo com HTML, CSS e JavaScript, aplicando conceitos de semântica, responsividade e boas práticas de código limpo.</p>
+    </article>
+
+    <section id="habilidades">
+      <h2>Minhas Habilidades</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Tecnologia</th>
+            <th>Nível</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>HTML</td>
+            <td>Avançado</td>
+          </tr>
+          <tr>
+            <td>CSS</td>
+            <td>Intermediário</td>
+          </tr>
+          <tr>
+            <td>JavaScript</td>
+            <td>Básico</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <!-- Barra lateral com formulário -->
+  <aside>
+    <section id="contato">
+      <h2>Entre em Contato</h2>
+      <form>
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </aside>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2025 Mônica Oliveira. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
