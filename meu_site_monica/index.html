@@ -75,33 +75,33 @@
 
     <p><a href = https://classroom.google.com/c/Njg4Mzg0ODAyNzg1 target="_blank"> Google </a> para fazer suas pesquisas</p> 
 
-  <p>Ir para a página de <a href="meu_hobby.html">Meu Hobby</a></p>
+    <p>Ir para a página de <a href="meu_hobby.html">Meu Hobby</a></p>
 
 
 
-  <!-- exemplo lista não ordenada: -->
+    <!-- exemplo lista não ordenada: -->
 
-  <span style="color: white;">
-    <h2>Lista de Compras</h2>
-    <ul>
-    <li>Arroz</li>
-    <li>Feijão</li>
-    <li>Café</li>
-    </ul>
-  </span>
+    <span style="color: white;">
+      <h2>Lista de Compras</h2>
+      <ul>
+      <li>Arroz</li>
+      <li>Feijão</li>
+      <li>Café</li>
+      </ul>
+    </span>
 
 
-  <!-- exemplo lista ordenada: -->
-  <span style="color: white;">
-    <h2>Passos para Fazer Café</h2>
-    <ol type="i">
-    <li>Ferva a água.</li>
-    <li>Coloque o pó no coador.</li>
-    <li>Despeje a água quente.</li>
-    <li>Coloque o pó no coador.</li>
-    <li>Despeje a água quente.</li>
-    </ol>
-  </span>
+    <!-- exemplo lista ordenada: -->
+    <span style="color: white;">
+      <h2>Passos para Fazer Café</h2>
+      <ol type="i">
+      <li>Ferva a água.</li>
+      <li>Coloque o pó no coador.</li>
+      <li>Despeje a água quente.</li>
+      <li>Coloque o pó no coador.</li>
+      <li>Despeje a água quente.</li>
+      </ol>
+    </span>
 
 <dl>
 <dt>HTML</dt>
@@ -119,8 +119,134 @@
 
 </dl>
   
+
+  <table>
+      <tr>
+        <th>Nome peça</th>
+        <th colspan="2">Preço</th> <!--/*juntou duas tabelas*/ -->
+        
+      </tr>
+
+      <tr>
+        <td>Teclado mecânico</td>
+        <td>R$50000</td>
+        <td> 3000</td>
+      </tr>
+
+      <tr>
+        <td rowspan="2">Touro mecânico</td>
+        <td> 40000</td>
+
+      </tr>
+
+      <tr>
+        <!-- apagou o touro mecanico daquio -->
+        <td>R$0</td>
+      </tr>
+  </table>
+
+
+
+  <!-- TABELA UTILIZANDO DIV -->
+
+<div style="border: 1px solid black; width: 300px;
+padding: 10px;">
+Conteúdo principal da caixa...
+<br>
+<div style="background-color: lightblue; border:
+1px solid blue; padding: 5px;">
+Caixa de Destaque Interna
+</div>
+</div>
+
+
+<form action="" method=""> <!-- NÃO TEM Nada por enquanto -->
+  
+    <label for="assunto">Assunto:</label>
+    <input type="text" id="assunto" name="assunto" placeholder="Digite o assunto aqui">
+    <br>
+
+    <label for="mensagem">Sua Mensagem:</label>
+    <textarea id="mensagem" name="mensagem" rows="1" cols="5"></textarea>
+   <br>
+
+   <label for="email_contato">Email:</label>
+   <input type="email" id="email_contato" name="email_contato" placeholder="Insira o email" required> <!-- com o type = email, ele apresenta uma mensagem de erro, pq email precisa de @-->
+   <br> 
+
+  <label for="senha">Senha:</label>
+   <input type="password" id="senha" name="senha" placeholder="Insira a senha" required>
+  <br>
+
+    <label for="idade">Idade:</label>
+   <input type="number" id="idade" name="idade" placeholder="Insira a idade" required maxlength = '3'> <!-- Colocar setinha para aumentar ou diminuir o número -->
+  <br>
+
+    <label for="data">Data de nascimento:</label>
+   <input type="date" id="data" name="data">
+
+     <label for="cep">CEP:</label>
+<input type="text" id="cep" name="cep" pattern="[0-9]{5}-[0-9]{3}" placeholder="00000-000">
+<br>
+   <button type="submit">Enviar</button> <!-- Colocar botão e ação para enviar -->
+   <button type="reset">Limpar Tudo</button> <!-- Colocar botão e ação para excluir -->
+
+
+
+<p style="color: white;">Quando você nasceu?</p>
+ <input type="radio" id="manha" name="periodo" value="manha">
+ <label for="manha">Manhã</label><br>
+ <input type="radio" id="tarde" name="periodo" value="tarde">
+ <label for="tarde">Tarde</label><br>
+
+
+<p style="color: white;">Quais linguagens você mais gosta?</p>
+<input type="checkbox" id="html" name="tecnologias" value="html">
+<label for="html">HTML</label><br>
+
+<input type="checkbox" id="css" name="tecnologias" value="css">
+<label for="css">CSS</label><br>
+
+<input type="checkbox" id="js" name="tecnologias" value="javascript">
+<label for="js">JavaScript</label><br>
+
+<label for="estado">Estado:</label>
+ <select name="estado" id="estado">
+ <option value= "">Selecione...</option>
+ <option value="SP">São Paulo</option>
+ <option value="RJ">Rio de Janeiro</option>
+ <option value="MG">Minas Gerais</option>
+ </select>
+
+</form>
+
+<br>
+<form action="/upload" method="POST" style="color: white;">
+ <label for="avatar">Foto de Perfil:</label>
+ <input type="file" id="avatar" name="avatar">
+ <button type="submit">Enviar Foto</button>
+</form>
+
+
+
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <h2>Mudando o símbolo da lista</h2>
 

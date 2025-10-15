@@ -9,3 +9,33 @@ h1 {color: #054717;}
 
 h2 {color: #054717;}
 h3 {color: #c60000;}
+
+table {border: 2px solid white; /*fazer a borda da tabela, mas só a de fora */
+       width: 500px;
+       border-spacing: 3px;
+       margin-left: auto;  /*o auto vai respeitar outros conteúdos presentes na página */
+       margin-right: auto;}
+
+ td {padding: 10px;/*espaço entre a borda da cédula e oconteúdo */
+     border: 2px solid white;
+     /* background-color: purple; */
+     background-image: url(../images/fundo_teste.jpg);
+
+     color: black;
+     }
+
+th {padding: 5px; /*espaço entre a borda da cédula e título/cabeçalho */
+    border: 2px solid white;
+    background-color: violet;
+    color: black;
+     }
+
+div {
+    border: 1px solid black;
+}
+
+div div{
+    border: 4px solid black;
+}
+
+label {color:#ffffff}
