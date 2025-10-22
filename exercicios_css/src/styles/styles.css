@@ -1,0 +1,7 @@
+#cabecalho-principal { 
+background-color: #333; 
+color: white; 
+} 
+
+h1{color: orange;} /*ficou laranja*/
+h1{color: blueviolet;} /*ficou roxo, pois tem prioridade, de maneira linear */
