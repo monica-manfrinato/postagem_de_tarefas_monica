@@ -2,11 +2,50 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notícia Completa</title>
-    <link rel="stylesheet" href="/src/styles/styles_noticia.css">
+    <title>Notícias de Tecnologia</title>
+    <link rel="stylesheet" href="exercicios_css\src\styles\styles_noticia.css">
+    
+    <style>
+        .titulo-noticia {
+            color: purple; /* Este estilo pode ou não ser aplicado, dependendo da especificidade */
+        }
+    </style>
 </head>
 <body>
-    
+
+    <header id="cabecalho-principal">
+        <h1>Portal TechNews</h1>
+        <p>Seu portal de notícias sobre tecnologia.</p>
+    </header>
+
+    <main>
+        <article>
+            <h2 class="titulo-noticia">Nova Geração de Processadores</h2>
+            <p class="destaque" style="color: brown;">A maior fabricante de chips do mundo anunciou hoje sua nova linha de processadores...</p>
+            <div class="info-autor">
+                <p>Por: Redação TechNews</p>
+                <a href="#">Ver mais posts do autor</a>
+            </div>
+        </article>
+        
+        <h2 class="titulo-secao">Dicas Rápidas</h2>
+        <p>Mantenha seu sistema operacional atualizado.</p>
+        <p>Faça backups regulares dos seus arquivos.</p>
+        
+        <section class="contato">
+            <h3>Fale Conosco</h3>
+            <p>Envie sua sugestão de pauta:</p>
+            <form>
+                <input type="email" placeholder="Seu e-mail" required>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>TechNews &copy; 2025 - Todos os direitos reservados.</p>
+        <a href="#">Voltar ao topo</a>
+    </footer>
+
 </body>
 </html>
