@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Aula 14 - Formatação de Elementos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+<link rel="stylesheet" href="src/style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Formatação com CSS</h1>
+      <nav>
+        <ul>
+          <li><a href="#textos">Textos</a></li>
+          <li><a href="#imagens">Imagens</a></li>
+          <li><a href="#listas">Listas</a></li>
+          <li><a href="#tabelas">Tabelas</a></li>
+          <li><a href="#links">Links</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="textos">
+        <h2>5.5.1. Formatação de Textos</h2>
+        <p class="paragrafo-destaque">
+          Este é um parágrafo de exemplo para aplicarmos diversas estilizações.
+          Vamos mudar a fonte, o tamanho, a cor, o espaçamento entre letras e
+          palavras, e também o alinhamento. O CSS nos dá controle total sobre a
+          tipografia.
+        </p>
+        <p>
+          Outro parágrafo comum.
+          <span class="texto-pequeno">Este texto está menor.</span>
+          <span class="texto-italico">E este está em itálico.</span>
+        </p>
+      </section>
+
+      <section id="imagens">
+        <h2>5.5.2. Formatação de Imagens</h2>
+        <p>
+          A imagem a seguir será estilizada para demonstrar como podemos
+          controlar seu tamanho, bordas e alinhamento.
+        </p>
+        <img
+          src="img/imagem_exemplo.jpg"
+          alt="Exemplo de Imagem"
+          class="imagem-bonita"
+        />
+        <img
+          src="img/imagem_exemplo.jpg"
+          alt="Outra Exemplo de Imagem"
+          class="imagem-redonda"
+        />
+      </section>
+
+      <section id="listas">
+        <h2>5.5.3. Formatação de Listas</h2>
+        <h3>Lista Não Ordenada (UL)</h3>
+        <ul>
+          <li>Item um da lista</li>
+          <li>Item dois da lista</li>
+          <li>Item três da lista</li>
+        </ul>
+
+        <h3>Lista Ordenada (OL)</h3>
+        <ol>
+          <li>Primeiro item</li>
+          <li>Segundo item</li>
+          <li>Terceiro item</li>
+        </ol>
+      </section>
+
+      <section id="tabelas">
+        <h2>5.5.4. Formatação de Tabelas</h2>
+        <p>Vamos estilizar uma tabela simples para melhorar sua leitura.</p>
+        <table class="tabela-estilizada">
+          <thead>
+            <tr>
+              <th>Produto</th>
+              <th>Preço</th>
+              <th>Estoque</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Teclado Mecânico</td>
+              <td>R$ 350,00</td>
+              <td>15</td>
+            </tr>
+            <tr>
+              <td>Mouse Gamer</td>
+              <td>R$ 180,00</td>
+              <td>30</td>
+            </tr>
+            <tr>
+              <td>Monitor UltraWide</td>
+              <td>R$ 1.800,00</td>
+              <td>8</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="links">
+        <h2>5.5.5. Formatação de Âncoras (Links)</h2>
+        <p>
+          Este é um <a href="#" class="link-menu">link de exemplo</a> para
+          navegar. Vamos ver como ele se comporta em diferentes estados.
+        </p>
+        <p>
+          Visite o <a href="https://www.google.com" target="_blank">Google</a>.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Aula CSS</p>
+    </footer>
+  </body>
+</html>

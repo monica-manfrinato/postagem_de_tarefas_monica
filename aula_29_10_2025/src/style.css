@@ -1,0 +1,17 @@
+body {font-family: 'Roboto', sans-serif;}
+
+a:link{
+    color:#7fff00
+}
+
+a:visited{
+    color:#d2691e
+}
+
+a:hover{
+    color:#000000
+}
+
+a:active{
+    color:#00ffff
+}
