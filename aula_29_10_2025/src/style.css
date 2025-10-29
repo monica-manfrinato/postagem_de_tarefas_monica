@@ -15,3 +15,45 @@ a:hover{
 a:active{
     color:#00ffff
 }
+
+#imagem_paisagem{
+    background-color:#0000ff;
+    width: 50%;
+}
+
+div > img{
+    /* width: 200px; */   /*garante que o tamanho será esse da img */ 
+    max-width: 100%;     /* permite que a img se adeque até o limite estabelecido pelo div */
+    border-radius: 50%;
+    box-shadow: 50px 60px 8px blueviolet;
+    opacity: 0.0;
+}
+
+ul {
+  list-style-type: none; /* Remove os marcadores padrão */
+  padding-left: 0;
+}
+ul li {
+  padding: 0.5rem;
+  border-bottom: 1px solid #eee; 
+/* Linha separadora entre os itens */
+}
+ol {
+  list-style-type: decimal-leading-zero; /* 01, 02, 03... */
+  padding-left: 2rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+}
+th, td {
+    padding: 0.75rem; /* Usa rem para espaçamento */
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
