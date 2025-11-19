@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 16.1 - Flexbox e Grid (Exemplos Separados)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Flexbox - Exemplos Práticos</h1>
+
+    <section>
+        <h2>1.1. Ativação (display: flex)</h2>
+        <p>Os itens ficam lado a lado automaticamente.</p>
+        <div class="flex-container" id="flex-basico">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>1.2. Direção (flex-direction: column)</h2>
+        <p>Muda o eixo principal para vertical.</p>
+        <div class="flex-container" id="flex-direction">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>1.3. Eixo Principal (justify-content: space-between)</h2>
+        <p>Distribui o espaço sobrando entre os itens.</p>
+        <div class="flex-container" id="flex-justify">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>1.4. Eixo Cruzado (align-items: center)</h2>
+        <p>Alinha verticalmente no centro (porque a altura é fixa).</p>
+        <div class="flex-container" id="flex-align">
+            <div class="item" style="height: 40px">Peq</div>
+            <div class="item" style="height: 80px">Grande</div>
+            <div class="item" style="height: 60px">Médio</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>1.5. Centralização Total (Justify + Align Center)</h2>
+        <p>O "Santo Graal" da centralização de elementos.</p>
+        <div class="flex-container" id="flex-center">
+            <div class="item">Centro</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>1.6. Quebra de Linha (flex-wrap: wrap)</h2>
+        <p>Os itens descem para a próxima linha se faltar espaço.</p>
+        <div class="flex-container" id="flex-wrap">
+            <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+            <div class="item">4</div><div class="item">5</div><div class="item">6</div>
+            <div class="item">7</div><div class="item">8</div><div class="item">9</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>1.7. Crescimento (flex-grow: 1)</h2>
+        <p>Os itens esticam para ocupar todo o espaço vazio.</p>
+        <div class="flex-container" id="flex-grow">
+            <div class="item">A</div>
+            <div class="item">B</div>
+            <div class="item">C</div>
+        </div>
+    </section>
+
+    <hr>
+
+    <h1>CSS Grid - Exemplos Práticos</h1>
+
+    <section>
+        <h2>2.1. Colunas Iguais (fr)</h2>
+        <div class="grid-container" id="grid-basico">
+            <div class="item-grid">1</div>
+            <div class="item-grid">2</div>
+            <div class="item-grid">3</div>
+            <div class="item-grid">4</div>
+            <div class="item-grid">5</div>
+            <div class="item-grid">6</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>2.2. Unidades Mistas (px, auto, fr)</h2>
+        <div class="grid-container" id="grid-misto">
+            <div class="item-grid">200px (Fixo)</div>
+            <div class="item-grid">Auto (Conteúdo)</div>
+            <div class="item-grid">1fr (Resto)</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>2.3. Função Repeat (4 colunas)</h2>
+        <div class="grid-container" id="grid-repeat">
+            <div class="item-grid">1</div>
+            <div class="item-grid">2</div>
+            <div class="item-grid">3</div>
+            <div class="item-grid">4</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>2.4. Função Minmax (Min 150px, Max 1fr)</h2>
+        <p><em>Redimensione a janela para ver o efeito.</em></p>
+        <div class="grid-container" id="grid-minmax">
+            <div class="item-grid">Item 1</div>
+            <div class="item-grid">Item 2</div>
+            <div class="item-grid">Item 3</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>2.5. Posicionamento Avançado (Span e Linhas)</h2>
+        <div class="grid-container" id="grid-posicao">
+            <header class="item-grid" id="item-header">Header (Span 3)</header>
+            <aside class="item-grid" id="item-sidebar">Sidebar (Span 2 rows)</aside>
+            <article class="item-grid">Conteúdo 1</article>
+            <article class="item-grid">Conteúdo 2</article>
+            <footer class="item-grid" id="item-footer">Footer (Linha -1)</footer>
+        </div>
+    </section>
+
+    <section>
+        <h2>2.6. Grid Template Areas (Mapa do Site)</h2>
+        <div class="grid-container" id="grid-areas">
+            <header class="item-grid area-header">Header</header>
+            <main class="item-grid area-main">Main Content</main>
+            <aside class="item-grid area-aside">Aside</aside>
+            <footer class="item-grid area-footer">Footer</footer>
+        </div>
+    </section>
+
+</body>
+</html>

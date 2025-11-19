@@ -1,0 +1,57 @@
+/* 1. Crie um novo projeto aula16-layout/exercicio com index.html e style.css.
+ 2. Copie o HTML base do próximo slide.
+ 3. Sua missão: Usar o que aprendemos (especialmente position) para fazer o aside e 
+main ficarem lado a lado.
+ 4. O footer deve ficar sempre por último, abaixo de tudo. */
+ * {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ }
+
+ .content-wrapper{
+    position: relative;
+    width: 90%;
+    padding-right: 250px;
+
+ }
+
+ .site-nav ul li {
+    display: inline-block;
+    
+ }
+ .main-content{
+    padding: 20px;
+    margin-top: 12px;
+    position: absolute;
+ width: 80%;
+ }
+
+ .sidebar{
+    width: 25%;
+    background-color: #d3d3d3;
+    border: solid black;
+    margin: 10 px auto;
+    position: absolute;
+    left: 36rem;
+    text-align: center;
+    
+ }
+ .sidebar li{
+    list-style: none;
+ }
+
+
+ .site-footer{
+    position:absolute;
+    padding-bottom: 2px;
+    bottom: 20px;
+ }
+.sidebar{
+    text-decoration: none;
+}
+
+h3{
+    background-color: brown;
+    color:#fffdc8;
+}

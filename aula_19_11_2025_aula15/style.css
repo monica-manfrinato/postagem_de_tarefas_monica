@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.caixa {
+ width:100px;
+ padding:10px;
+ border:1px solid black;
+ margin: 10px;
+margin-bottom:20px
+}
+
+
+.caixa2 {
+ box-sizing:border-box; /* A MÁGICA! */ 
+ width:100px;
+ padding:10px;
+ border: 1px solid black;
+ margin-left: 10px;
+}
+
+ .container {
+ width: 80%;
+ margin: 10px auto;/* 0 topo/baixo, auto laterais */
+ border: 1px dashed red;
+ padding: 38px;
+ background-color: #b0ff6b;
+}
+  
+ /* Seleciona a lista DENTRO da tag nav */
+ nav ul {
+ /* Remove os marcadores (bullets) */
+ list-style: 
+none;
+ margin: 0;
+ padding: 0;
+ /* Remove o espaçamento padrão do navegador */
+ /* (Opcional) Define um fundo para a barra de menu */
+ background-color: 
+#333;
+ }
+
+ nav li{
+    display: inline-block;
+ }
+
+ /* Seleciona os links DENTRO dos itens da lista da nav */
+ nav li a {
+ display:block;/* Faz o link se comportar como bloco (ocupa o <li>) */
+ color:white;
+ text-decoration:none; /*tira o underline*/
+ padding:1rem; 
+/* 1rem = 16px (espaçamento interno) */
+ /* O resultado é um botão de 16px de padding em todos os lados */
+ }
+ /* Efeito :hover que aprendemos */
+ nav li a:hover {
+ background-color:#999;
+ color:#222
+}
+
+ /* 1. Esconde o submenu por padrão */
+ nav ul ul {
+ display:none;
+ position:absolute; /* (Tópico avançado, mas necessário aqui) */
+ background-color:red; /* Fundo para o dropdown */
+ }
+
+  /* 2. Mostra o submenu quando o <li> pai está em :hover */
+nav ul li:hover > ul{
+    display:block;
+}
+
+/* 3. Estiliza os itens do submenu para ficarem verticais */
+/*A NAV que contém um UL que contém um outro UL e contém um LI estátransformando os elementos em block*/
+nav ul ul li {
+ display:block;
+ width:100px; /* Largura para o dropdown */
+ 
+ }
+
+  nav li a:hover {
+ background-color:#999;
+ color:#222
+}
+
+/*Utilizando classes, fica mais organizado, ai eu n preciso colocar 'nav ul ul li a', mas só chamar a classe msm*/
+
+.menu_principal a{
+color:black
+ 
+ }
