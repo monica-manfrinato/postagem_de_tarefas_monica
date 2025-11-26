@@ -175,3 +175,146 @@ linhas */
  display: grid; /* Grid já ativo para todos os exemplos de grid */
  gap: 5px;
 }
+ /* 2.1. Básico */  
+
+#grid-basico { display: grid;  
+grid-template-columns: 2fr 3fr;  /*define a quantidade de colunas*/ 
+/*o bloco 3 ficou do msm tamanho do 1, pq não coube na 1° linha, e quando desceu foi pra 1° coluna, que tinha tamanho de 2fr */ 
+grid-template-rows: 2fr 3fr}  /*define a quantidade de colunas*/
+
+/* 2.1. Básico */
+#grid-basico {
+gap: 40px;
+}
+/* coloca o msm valor pro espaço entre colunas e linhas*/
+
+/* 2.2. Misto */
+#grid-misto {
+display: grid;
+grid-template-columns: 200px auto 1fr;
+gap: 10px;
+}
+/* Coluna 1: 200px fixos (ex: Sidebar fixa)
+Coluna 2: auto (Tamanho do conteúdo mais
+largo)
+Coluna 3: 1fr (Ocupa todo o resto do espaço)
+*/
+
+/* 2.3. Repeat */
+#grid-repeat {
+display: grid;
+grid-template-columns: repeat(5, 2fr);
+gap:6px;
+}
+/* Podemos misturar! */
+/* 1 coluna de 100px, depois 3 colunas de 1fr */
+/* grid-template-columns: 100px repeat(3, 1fr); */
+
+/* 2.4. Minmax */
+#grid-minmax { display: grid;
+grid-template-columns: repeat(3, minmax(150px, 1fr));
+gap: 10px;
+}
+/* As colunas terão no mínimo 150px.
+Se houver espaço sobrando, elas crescem (1fr).
+Se não houver, elas param em 150px (gera scroll horizontal ou quebra).
+*/
+
+/* 2.5. Grade Implícita */
+#grid-implicit-row {
+display: grid;
+grid-template-columns: 2fr 2fr;
+grid-template-rows: 1fr 1fr;
+gap: 10px;
+grid-auto-rows: 80px; /* Linhas extras terão 100px */
+grid-auto-columns: 80px; /* Colunas extras tem esse tamanho específico */
+
+grid-auto-flow: column; /* Preenche buracos */
+}
+
+
+/* 2.6. Alinhamento de Itens */
+#grid-alignment-items {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 10px;
+height: 200px;
+justify-items: center; /* Horizontal na célula */
+align-items: center; /* Vertical na célula */
+}
+
+/* 2.7. Alinhamento da Grade (NOVO) */
+#grid-alignment-content {
+display: grid;
+grid-template-columns: 100px 100px;
+gap: 5px;
+height: 300px;
+justify-content: center; /* Grade no meio horizontal */
+align-content: center; /* Grade no meio vertical */
+}
+
+
+/* 2.8. Posicionamento por Linhas (Start/End) */
+#grid-linhas {
+display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;
+}
+.item-linha-especifica {
+grid-column: 1 / 4; /* Da linha 1 até a 3 */
+background-color: #e74c3c;
+}
+
+/* 2.9. Posicionamento com Span */
+#grid-span {
+display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;
+grid-template-rows: repeat(4, 1fr); gap: 10px;
+}
+.item-span {
+grid-column: span 2; /* Ocupa 2 espaços */
+background-color: #9b59b6;
+}
+.item-span-row {
+grid-row: span 2; /* Ocupa 2 linhas verticais */
+background-color: #ff9d3c;
+}
+
+/* 2.10. Linhas Negativas */
+#grid-negativo {
+display: grid; grid-template-columns: repeat(4, 1fr);
+gap: 10px;}
+.item-negativo {
+grid-column: 1 / -1; /* Do começo até o fim absoluto */
+background-color: #34495e;
+}
+
+/* 2.11. Alinhamento Individual */
+#grid-item-alignment {
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: repeat(3,1fr);
+height: 200px;
+gap: 10px;
+justify-items: start;
+}
+
+.item-diferente {
+justify-self: end;
+align-self: end;
+background-color: #d35400;
+}
+
+/* 2.10. Template Areas */
+#grid-areas {
+display: grid;
+grid-template-columns: 1fr 3fr;
+grid-template-areas:
+"header header"
+"aside main"
+"footer footer";
+gap: 10px;
+height: 300px;
+}
+.area-header { grid-area: header; background-color: #d35400; }
+.area-main { grid-area: main; background-color: #f39c12; color:
+#333; }
+.area-aside { grid-area: aside; background-color: #e67e22; }
+.area-footer { grid-area: footer; background-color: #d35400; }
